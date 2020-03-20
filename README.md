@@ -1,4 +1,4 @@
-# expandedgrid
+# expanded_grid
 
 An unscrollable Grid View.
 
