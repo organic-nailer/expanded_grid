@@ -2,13 +2,36 @@
 
 An unscrollable Grid View.
 
-## Getting Started
+![](img/example.jpg)
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+# Usage
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+First, determine column and row size.
+
+Default size is column = row = 1.
+
+```dart
+ExpandedGrid(
+  column: 4, 
+  row: 5,
+)
+```
+
+Second, pass ExpandedGridContent List to children.
+
+If ExpandedGridContent specifies out of range, it is ignored.
+
+Default position is (0,0).
+
+```dart
+ExpandedGrid(
+  column: 4, row: 5,
+  children: <ExpandedGridContent>[
+    ExpandedGridContent(
+      rowIndex: 0, columnIndex: 0,
+      rowSpan: 2, columnSpan: 3,
+      child: Container(color: Colors.blue,)
+    ),
+    //...
+  ]
+```
