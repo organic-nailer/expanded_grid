@@ -1,5 +1,7 @@
 # expanded_grid
 
+[![Pub](https://img.shields.io/pub/v/expanded_grid.svg)](https://pub.dev/packages/expanded_grid)
+
 An unscrollable Grid View.
 
 ![](img/example.jpg)
