@@ -5,7 +5,7 @@ class ExpandedGrid extends StatelessWidget {
   final int column, row; // divide equally
   final List<ExpandedGridContent> children;
 
-  ExpandedGrid({Key key, this.column = 1, this.row = 1,@required this.children}): super(key: key);
+  ExpandedGrid({Key? key, this.column = 1, this.row = 1,required this.children}): super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class ExpandedGrid extends StatelessWidget {
                   child: gridContent,
                 ),
               );
-            }).where((element) => element != null).toList()
+            }).where((element) => element != null).toList() as List<Widget>
         );
       },
     );

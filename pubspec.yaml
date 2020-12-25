@@ -1,11 +1,11 @@
 name: expanded_grid
 description: An unscrollable Grid View.
-version: 0.0.2
+version: 1.0.0-nullsafety.0
 # author: fastriver_org
 homepage: https://github.com/organic-nailer/expanded_grid
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: '>=2.12.0-133.2.beta <3.0.0'
 
 dependencies:
   flutter:
