@@ -15,10 +15,8 @@ class ExpandedGrid extends StatelessWidget {
         var contentHeight = boxConstraint.biggest.height / row;
 
         return Stack(
-            children: children.map((gridContent) {
-              if(gridContent.columnIndex < 0 || gridContent.columnIndex + gridContent.columnSpan - 1 >= column
-                  || gridContent.rowIndex < 0 || gridContent.rowIndex + gridContent.rowSpan - 1 >= row) return null;
-
+            children: children.where((e) => !(e.columnIndex < 0 || e.columnIndex + e.columnSpan - 1 >= column
+                || e.rowIndex < 0 || e.rowIndex + e.rowSpan - 1 >= row)).map((gridContent) {
               return Positioned(
                 top: contentHeight * gridContent.rowIndex,
                 left: contentWidth * gridContent.columnIndex,
@@ -28,7 +26,7 @@ class ExpandedGrid extends StatelessWidget {
                   child: gridContent,
                 ),
               );
-            }).where((element) => element != null).toList() as List<Widget>
+            }).toList() as List<Widget>
         );
       },
     );
